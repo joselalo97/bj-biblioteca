@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '', component: PublicComponent,
     children: [
       {
-        path: '', loadChildren: () => import('./pub-historial/pub-historial.module').then(m => m.PubHistorialModule)
+        path: '', loadChildren: () => import('./pub-biblioteca/pub-biblioteca.module').then(m => m.PubHistorialModule)
       }
     ]
   }

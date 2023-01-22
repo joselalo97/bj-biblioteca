@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PubHistorialComponent } from './pub-historial.component';
+import { PubBibliotecaComponent } from './pub-biblioteca.component';
+
 
 const routes: Routes = [
   {
-    path: '', component: PubHistorialComponent
+    path: '', component: PubBibliotecaComponent
   }
 ];
 
@@ -12,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PubHistorialRoutingModule { }
+export class PubBibliotecaRoutingModule { }
