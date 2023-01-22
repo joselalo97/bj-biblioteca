@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PubBibliotecaComponent } from './pub-biblioteca.component';
-import { PublicRoutingModule } from '../public-routing.module';
+import { PubBibliotecaRoutingModule } from './pub-biblioteca-routing.module';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { PublicRoutingModule } from '../public-routing.module';
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PubBibliotecaRoutingModule
   ]
 })
-export class PubHistorialModule { }
+export class PubBibliotecaModule { }
