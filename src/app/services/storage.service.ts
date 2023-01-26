@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { StorageName } from 'app/core/constants/stora.enum';
 import { LOCAL_STORAGE, WebStorageService } from 'ngx-webstorage-service';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({
@@ -32,6 +33,16 @@ export class StorageService {
    */
   public setToken(token: string): void {
     this.localStorage.set(StorageName.Token, btoa(JSON.stringify(token)));
+  }
+
+
+  public verifyToken():Observable<boolean>{
+    
+    const token = this.getToken()
+    
+    //service para consultar token valido
+    
+    return of(token ? false : true);
   }
 
 }
