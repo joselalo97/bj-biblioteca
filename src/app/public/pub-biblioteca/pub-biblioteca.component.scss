@@ -1,0 +1,29 @@
+.label-entity{
+    border-radius: 10px;
+    padding: .5rem;
+    background-color: #68b7c3;
+    text-align: center;
+    font-size: 12px;
+    width: max-content;
+}
+
+.gap{
+    gap: .8rem;
+}
+
+.search-filter{
+    width: 300px;
+    min-width: 0;
+}
+
+.border-round{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+.maring-spacing{
+    @media (max-width: 990px) {
+        margin-top: .3rem !important;
+    }
+}

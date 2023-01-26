@@ -1,1 +1,103 @@
-<p>pub-biblioteca works!</p>
+<div class="row m-0">
+    <div class="col-12 col-xl-10 col-lg-10 col-md-12">
+        <div #content>
+            <div class="mt-2">
+                <i class="fas fa-home bj-color"></i>
+            </div>
+            <div class="mt-2">
+                <h5 class="bj-color">Documentos favoritos</h5>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div>
+                    <span>Mostrando 1-10 de 20 resultados</span>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap basis">
+                    <i class="fas fa-trash"></i>
+                    <div class="d-flex align-items-center border-sm border-round search-filter">
+                        <input type="text" class="form-control pl-2 pr-1" placeholder="Buscar dentro de favoritos"
+                            style="border: none;">
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Mostrar</mat-label>
+                            <mat-select>
+                                <mat-select-trigger>
+                                    10
+                                </mat-select-trigger>
+                                <mat-option *ngFor="let more of [10,20,50,100]">
+                                    {{more}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Ordenar</mat-label>
+                            <mat-select>
+                                <mat-select-trigger>
+                                    10
+                                </mat-select-trigger>
+                                <mat-option *ngFor="let order of ['A-z','Z-a']">
+                                    {{order}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="favorites py-4">
+            <div class="card border-sm mb-3 p-3" *ngFor="let fav of ['','','','','']">
+                <div class="row">
+                    <div class="col-1 d-flex justify-content-center align-items-center">
+                        <mat-checkbox class="text-center"></mat-checkbox>
+                    </div>
+                    <div class="col-xl-5 col-11 col-lg-5 col-md-11 col-sm-12">
+                        <p class="bj-color"><strong>LEY GENERAL DE SOCIEDADES MERCANTILES</strong></p>
+                        <p>Ley que conoce como sociedades mercatiles: sociedad en nombre colectivo; sociedad en
+                            comandita simple;</p>
+                        <p>Ambito: Federal</p>
+                        <p>Fecha de resolcución: 30/12/2021</p>
+                    </div>
+                    <div class="col-xl-2 col-12 col-lg-2 col-md-4 col-sm-4">
+                        <p class="text-center bj-black mt-2">Tesis</p>
+                    </div>
+                    <div class="col-xl-2 col-12 col-lg-2 col-md-4 col-sm-4">
+                        <p class="text-center bj-black mt-2 mb-2">17-02-2022 10:24</p>
+                    </div>
+                    <div class="col-xl-2 col-12 col-lg-2 col-md-4 col-sm-4">
+                        <div class="label-entity text-in-dark m-auto">
+                            <span>Sentencias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-xl-2 col-md-12 col-lg-2">
+        <div class="card border-sm mb-1 maring-spacing" [style.marginTop.px]="margin">
+            <div class="title p-2">
+                <span class="bj-black font-weight-bold">Etiquetas</span>
+            </div>
+            <div class="content-list p-2">
+                <div class="row "
+                    *ngFor="let label of ['sentencias_scjn','tesis_corte','ordenamientos','acuerdos_scjn','vt_scjn','coidh_dh','derechoshumanos']">
+                    <div class="col-10">
+                        <span>{{ label }}</span>
+                    </div>
+                    <div class="col-2">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-sm">
+            <div class="title p-2">
+                <span class="bj-black font-weight-bold">Sugerencias</span>
+            </div>
+        </div>
+    </div>
+</div>

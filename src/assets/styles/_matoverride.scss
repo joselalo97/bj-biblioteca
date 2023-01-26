@@ -133,6 +133,10 @@
       align-items: center;
 
       & .mat-form-field-infix {
+
+
+        width: 90px;
+
         & .mat-input-element:disabled {
           @if $theme_style=='light' {
             color: lighten($components_color, 30%);
