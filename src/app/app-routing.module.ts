@@ -4,10 +4,13 @@ import { CheckTokenGuard } from './guards/check-token.guard';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     loadChildren: () => import('./public/public.module').then(m => m.PublicModule),
-    canActivate: [CheckTokenGuard],
-    canLoad: [CheckTokenGuard]
+    canActivate: [CheckTokenGuard]
+  },
+  {
+    path: 'no-acceso',
+    loadChildren: () => import('./access/not-access/not-access.module').then(m => m.NotAccessModule)
   }
 ];
 

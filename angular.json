@@ -80,7 +80,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bj-frontend-biblioteca:build"
+            "browserTarget": "bj-frontend-biblioteca:build",
+            "port": 4202
           },
           "configurations": {
             "production": {

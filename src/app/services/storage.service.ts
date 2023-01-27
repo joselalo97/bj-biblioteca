@@ -36,13 +36,13 @@ export class StorageService {
   }
 
 
-  public verifyToken():Observable<boolean>{
+  public verifyToken():boolean{
     
     const token = this.getToken()
     
     //service para consultar token valido
     
-    return of(token ? false : true);
+    return token ? true : false;
   }
 
 }
