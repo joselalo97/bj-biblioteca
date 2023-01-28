@@ -1,12 +1,12 @@
 import { Inject, Injectable } from '@angular/core';
 import { StorageName } from 'app/core/constants/stora.enum';
 import { LOCAL_STORAGE, WebStorageService } from 'ngx-webstorage-service';
-import { Observable, of } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class StorageService {
   constructor(
     @Inject(LOCAL_STORAGE)
